@@ -1,5 +1,9 @@
 # sicp-exercises
-Racket flies of sicp-exercises
+## Racket flies
+- ch1_1.1
+- ch1_1.5
+
+## SICP-related resources
 
 [sicp website ](https://mitpress.mit.edu/sites/default/files/sicp/index.html)
 
