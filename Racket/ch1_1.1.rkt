@@ -2,12 +2,13 @@
 (define x 2)
 (define y (+ x 1))
 
-(* 2 x)
+(set! x 4)
 
-(identity y)  ; y is still 2 because the definition is not sticky
+(identity y)  ; y is still 3 because the definition is not sticky
+(identity x) ; 4
 
+(define z y) ; assign the value of y to z
 
-(define z y)
-(identity z)
+(identity z) ; 3
 (= z y)
 (= x y)
