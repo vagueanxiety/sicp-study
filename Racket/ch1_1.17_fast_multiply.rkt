@@ -35,14 +35,9 @@
     )
 )
 
-; (define (* a b)
-;     (if (= b 0) 
-;         0
-;         ( + a (* a (- b 1)) )
-;     )
-; )
 
-
+; tail recursion version is at http://community.schemewiki.org/?sicp-ex-1.17
+; the solution needs to be modified slightly to handle multiplication with negative b
 
 ;testing
 
@@ -62,7 +57,7 @@
 
 
 
-
+; + + 
 (fast_multiply 1 1)
 (fast_multiply 1 5)
 (fast_multiply 2 6)
@@ -70,9 +65,11 @@
 (fast_multiply 7 8)
 (fast_multiply 3 9)
 
+; 0
 (fast_multiply 1 0)
 (fast_multiply 0 0)
 
+; - +
 (fast_multiply -1 1)
 (fast_multiply -1 5)
 (fast_multiply -2 6)
@@ -80,6 +77,7 @@
 (fast_multiply -7 8)
 (fast_multiply -3 9)
 
+; + -
 (fast_multiply 1 -1)
 (fast_multiply 1 -5)
 (fast_multiply 2 -6)
@@ -87,6 +85,7 @@
 (fast_multiply 7 -8)
 (fast_multiply 3 -9)
 
+; - -
 (fast_multiply -1 -1)
 (fast_multiply -1 -5)
 (fast_multiply -2 -6)
