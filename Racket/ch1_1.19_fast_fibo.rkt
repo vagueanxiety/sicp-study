@@ -2,7 +2,7 @@
 
 ; this solution is from http://community.schemewiki.org/?sicp-ex-1.19
 ; the relation between p' and q' can be easily obtained by plugging the 
-; expressions of p and q into the definition of p and q
+; expressions of p and q into the definitions of p and q
 
 
 ; one analogy to this fast-fib would be walking. Think of changing q and p as changing pace.
