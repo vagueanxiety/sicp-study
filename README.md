@@ -1,5 +1,6 @@
 
 ## SICP-related resources
+[Structure and Interpretation of Computer Programs](https://www.amazon.ca/Structure-Interpretation-Computer-Programs-Abelson/dp/0262510871/ref=sr_1_1?ie=UTF8&qid=1531129781&sr=8-1&keywords=sicp)
 
 ### MIT 6.001
 
