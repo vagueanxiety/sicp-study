@@ -17,14 +17,18 @@
 ; randomly chose a number a less than n and check if its nth power
 ; is congruent to a modulo n
 ; this procedure only carries out one test
-(define (fermat-test n)
-    (define (try-it a)
+
+(define (fermat-test-iter n a count)
+    (define (pass?)
         (= (expmod a n n) a)
     )
 
-    (try-it ( + 1 (random (- n 1))) ) 
+    (cond 
+        ( (or (= count 0) (>= a n) (<= a 0)) true)
+        ((pass?) (fermat-test-iter n (+ a 1) (- count 1)))
+        (else false)
+    )
 )
-
 ; raise base to exponent and comppute its modulo
 (define (expmod base exponent modulo)
     (cond 
@@ -42,24 +46,27 @@
             )
         )
     )
-
 )
 
-; x is a prime if all n randomly chosen numbers pass the test
-(define (fast-prime? x n)
-    (cond 
-        ((= n 0) true)
-        ((fermat-test x)(fast-prime? x (- n 1)))
-        (else false)
-    )
+; x is a prime if all n < x pass the test
+(define (fast-prime? x)
+    (fermat-test-iter x 1 (- x 1))
 )
 
 
 
+(fast-prime? 2)
+(fast-prime? 9)
+(fast-prime? 19)
+(fast-prime? 199)
+(fast-prime? 1999)
+(fast-prime? 19999)
+(fast-prime? 199999)
 
-(fast-prime? 561 100)
-(fast-prime? 1105 100)
-(fast-prime? 1729 100)
-(fast-prime? 2465 100)
-(fast-prime? 2821 100)
-(fast-prime? 6601 100)
+(newline)
+(fast-prime? 561)
+(fast-prime? 1105)
+(fast-prime? 1729)
+(fast-prime? 2465)
+(fast-prime? 2821)
+(fast-prime? 6601)
