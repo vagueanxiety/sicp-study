@@ -11,9 +11,9 @@
 
     ; definitions of two variables?
     ; (define rounded-n (round-to-next-even n) )
-    ; n should be rounded like above, but i changed it for testing purposes (see line 16)
+    ; n could be rounded like above, but DrRacket gives an undefined error for line 16 (see the last takeaway)
+
     (define h (/ (- b a) n)) ; function-like variables :O
-    ; NOTE: this gives undefined error in DrRacket. See the last takeaway for explanations
 
     ; define the term (a piece-wise function g(k) that computes the term, more precisely) in the summation
     ; the term depends on the value of k
