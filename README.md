@@ -4,6 +4,28 @@
 
 [计算机程序的构造和解释](https://book.douban.com/subject/1148282/)
 
+
+### Solutions
+[sicp solutions](http://community.schemewiki.org/?sicp-solutions)
+
+[ivanjovanovic](https://github.com/ivanjovanovic/sicp)
+
+[sicp 解题集](http://sicp.readthedocs.io/en/latest/index.html)
+
+[wqzhang (invitation is needed)](https://wqzhang.wordpress.com/sicp-solutions/)
+
+[sicp solutions by voom & zoom](https://voom4000.wordpress.com/2015/08/10/sicp-solutions/)
+
+[michiakig](https://github.com/michiakig/sicp)
+
+
+### Documentation
+[Revised5 Report on the Algorithmic Language Scheme](http://schemers.org/Documents/Standards/R5RS/r5rs.pdf)
+
+[MIT/GNU Scheme 9.2 documentation](https://www.gnu.org/software/mit-scheme/documentation/mit-scheme-ref/)
+
+[Scheme at a Glance](http://www.troubleshooters.com/codecorn/scheme_guile/hello.htm#_Introduction)
+
 ### MIT 6.001
 
 [video lectures given in July 1986](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-001-structure-and-interpretation-of-computer-programs-spring-2005/video-lectures/)
@@ -12,33 +34,14 @@
 
 [major programming projects in 6.001](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-001-structure-and-interpretation-of-computer-programs-spring-2005/projects/)
 
-### Solutions
-[sicp solutions](http://community.schemewiki.org/?sicp-solutions)
-
-[sicp solutions by voom & zoom](https://voom4000.wordpress.com/2015/08/10/sicp-solutions/)
-
-[michiakig](https://github.com/michiakig/sicp)
-
-[ivanjovanovic](https://github.com/ivanjovanovic/sicp)
-
-[wqzhang (invitation is needed)](https://wqzhang.wordpress.com/sicp-solutions/)
-
-[SICP 解题集](http://sicp.readthedocs.io/en/latest/index.html)
-
-### Documentation
-[MIT/GNU Scheme 9.2 documentation](https://www.gnu.org/software/mit-scheme/documentation/mit-scheme-ref/)
-
-[sicp collections in Racket](http://docs.racket-lang.org/sicp-manual/index.html?q=sicp#%28part._.Introduction_to_the__lang_sicp_language%29)
-
-[sicp website ](https://mitpress.mit.edu/sites/default/files/sicp/index.html)
-
-[Full Text of SICP](https://sarabander.github.io/sicp/html/index.xhtml)
 
 ### MISC 
 [set up mit-scheme on macOS](http://rayhightower.com/blog/2015/02/18/sicp-study-group/)
 
 [SICP终于看完了，有一些经验想分享出来](http://cocode.cc/t/sicp/3397)
 
+[sicp website](https://mitpress.mit.edu/sites/default/files/sicp/index.html)
 
+[Full text of sicp](https://sarabander.github.io/sicp/html/index.xhtml)
 
 
