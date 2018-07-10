@@ -1,5 +1,5 @@
 
-## SICP-related resources
+## What is SICP?
 [Structure and Interpretation of Computer Programs](https://www.amazon.ca/Structure-Interpretation-Computer-Programs-Abelson/dp/0262510871/ref=sr_1_1?ie=UTF8&qid=1531129781&sr=8-1&keywords=sicp)
 
 [计算机程序的构造和解释](https://book.douban.com/subject/1148282/)
@@ -43,5 +43,13 @@
 [sicp website](https://mitpress.mit.edu/sites/default/files/sicp/index.html)
 
 [Full text of sicp](https://sarabander.github.io/sicp/html/index.xhtml)
+
+
+### Study Goals and Process
+- Watch the lecture videos and go through lecture notes
+- Read corresponding sections in the SICP book
+- Do exercises after each section
+- Check my solution with others'
+- Recap and write down some takeaways
 
 
