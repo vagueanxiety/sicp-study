@@ -46,7 +46,7 @@
 
 
 ### Study Goals and Process
-- Watch the lecture videos and go through lecture notes
+- Watch the lecture videos and take notes
 - Read corresponding sections in the SICP book
 - Do exercises after each section
 - Check my solution with others'
