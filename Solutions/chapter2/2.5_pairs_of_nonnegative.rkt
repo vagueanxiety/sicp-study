@@ -20,7 +20,7 @@
     (define (extract-iter product count)
         (cond ((even? product) (extract-iter (/ product 2) (+ 1 count))) 
                 (else count)))
-        
+          b
     (extract-iter p 0)
 )
 
