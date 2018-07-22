@@ -41,3 +41,14 @@
 (cdr a)
 (cdr b)
 (cdr c)
+
+
+(newline)
+(car (cons 12 34)) 
+(cdr (cons 12 34)) 
+(car (cons  3 0)) 
+(cdr (cons  3 0)) 
+(car (cons  0 3)) 
+(cdr (cons  0 3)) 
+(car (cons  0 0)) 
+(cdr (cons  0 0)) 
