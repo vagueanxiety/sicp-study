@@ -52,3 +52,7 @@
 )
 (define (percent i)
     (/ (width i) (center i)))
+
+; takeaway:
+; before implementing anything new, think whether the new procedure (or its definition)
+; can be built on previously implemented ones or not.

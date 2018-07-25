@@ -9,11 +9,13 @@
 ### Solutions
 [sicp solutions](http://community.schemewiki.org/?sicp-solutions)
 
+[wiki.drewhess.com](http://wiki.drewhess.com/wiki/Category:SICP_solutions)
+
 [ivanjovanovic](https://github.com/ivanjovanovic/sicp)
 
 [sicp 解题集](http://sicp.readthedocs.io/en/latest/index.html)
 
-[wqzhang (invitation is needed)](https://wqzhang.wordpress.com/sicp-solutions/)
+[wqzhang (invitation is required)](https://wqzhang.wordpress.com/sicp-solutions/)
 
 [sicp solutions by voom & zoom](https://voom4000.wordpress.com/2015/08/10/sicp-solutions/)
 
