@@ -1,4 +1,14 @@
 #lang sicp
+
+(define (reverse items)
+    (define (iter l t)
+        (if (null? l) 
+            t
+            (iter (cdr l) (cons (car l) t)) 
+        ))
+    (iter items nil)                    
+)    
+
 (define (square x)
     (* x x)
 )
@@ -87,6 +97,12 @@
         initial
         (op (car sequence) (accumulate op initial (cdr sequence)))))
 
+
+
+(define (r-reverse sequence)
+    (fold-right (lambda (x y) (append y (list x))) nil sequence))
+(define (l-reverse sequence)
+    (fold-left (lambda (x y) (append (list y) x)) nil sequence))   
 ;testing
 (map square (list 2 3 5 8 3))
 (append (list 1 2 3 4) (list 4 3 2 1))
@@ -121,3 +137,9 @@
 ; Give a property that op should satisfy 
 ; to guarantee that fold-right and fold-left will produce the same values for any sequence.
 ; (op a b) = (op b a)
+
+
+(newline)
+(reverse (list 23 72 149 34))
+(r-reverse (list 23 72 149 34))
+(l-reverse (list 23 72 149 34))
