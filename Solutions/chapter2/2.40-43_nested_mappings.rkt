@@ -170,6 +170,14 @@
 (define (make-queen row col) (cons row col))
 (define (queen-col queen) (cdr queen))
 (define (queen-row queen) (car queen))
+
+
+; Explain why this interchange makes the program 
+; run slowly. Estimate how long it will take Louis’s program to solve the eight-queens puzzle, 
+; because this interchange makes the program progresses like a tree-like manner rather than 
+; a linear manner.
+; Therefore, the time would be exponential to the board size 
+
 ; testing
 (display-list (new-prime-sum-pairs 6))
 (display-list (positive-ordered-pairs 3))
