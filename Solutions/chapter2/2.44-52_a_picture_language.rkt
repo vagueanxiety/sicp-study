@@ -86,6 +86,17 @@
 (define (origin-frame-alternative frame)
     (car frame))
 
+
+(define (segments->painter segment-list) 
+    (lambda (frame)
+        (for-each
+            (lambda (segment)
+                    (draw-line
+                        ((frame-coord-map frame)
+                        (start-segment segment))
+                        ((frame-coord-map frame)
+                        (end-segment segment))))
+                    segment-list)))
 ; exercises
 (define (up-split painter n) 
     (if (= n 0)
@@ -106,3 +117,57 @@
 
 (define right-split (split beside below)) 
 (define up-split (split below beside))
+
+(define (make-segment start end)
+    (cons start end))
+(define (start-segment seg)
+    (car seg))
+(define (end-segment seg)
+    (cdr seg))
+
+(define top-right (make-vect 1 1))
+(define bottom-right (make-vect 1 0))
+(define top-left (make-vect 0 1))
+(define bottom-left (make-vect 0 0))
+
+(define top-mid (make-vect 0.5 1))
+(define bottom-mid (make-vect 0.5 0))
+(define left-mid (make-vect 0 0.5))
+(define right-mid (make-vect 1 0.5))
+
+; passing the segment lists below to segments->painter will produce corresponding painters
+(define outline-segment-list (list (make-segment bottom-left top-left) (make-segment bottom-left bottom-right) 
+                                    (make-segment bottom-right top-right) (make-segment top-left top-right))
+(define diamond-shape-segment-list (list (make-segment bottom-mid left-mid) (make-segment left-mid top-mid) 
+                                    (make-segment top-mid right-mid) (make-segment right-mid bottom-mid))
+(define x-shape-segment-list (list (make-segment bottom-left top-right) (make-segment bottom-right top-left))
+; (define wave-segment-list ())
+; Ask george for the list :P
+
+; this solutions is from Sophia G at http://community.schemewiki.org/?sicp-ex-2.49
+; (define wave 
+;     (segments->painter (list 
+;                         (make-segment (make-vect .25 0) (make-vect .35 .5)) 
+;                         (make-segment (make-vect .35 .5) (make-vect .3 .6)) 
+;                         (make-segment (make-vect .3 .6) (make-vect .15 .4)) 
+;                         (make-segment (make-vect .15 .4) (make-vect 0 .65)) 
+;                         (make-segment (make-vect 0 .65) (make-vect 0 .85)) 
+;                         (make-segment (make-vect 0 .85) (make-vect .15 .6)) 
+;                         (make-segment (make-vect .15 .6) (make-vect .3 .65)) 
+;                         (make-segment (make-vect .3 .65) (make-vect .4 .65)) 
+;                         (make-segment (make-vect .4 .65) (make-vect .35 .85)) 
+;                         (make-segment (make-vect .35 .85) (make-vect .4 1)) 
+;                         (make-segment (make-vect .4 1) (make-vect .6 1)) 
+;                         (make-segment (make-vect .6 1) (make-vect .65 .85)) 
+;                         (make-segment (make-vect .65 .85) (make-vect .6 .65)) 
+;                         (make-segment (make-vect .6 .65) (make-vect .75 .65)) 
+;                         (make-segment (make-vect .75 .65) (make-vect 1 .35)) 
+;                         (make-segment (make-vect 1 .35) (make-vect 1 .15)) 
+;                         (make-segment (make-vect 1 .15) (make-vect .6 .45)) 
+;                         (make-segment (make-vect .6 .45) (make-vect .75 0)) 
+;                         (make-segment (make-vect .75 0) (make-vect .6 0)) 
+;                         (make-segment (make-vect .6 0) (make-vect .5 .3)) 
+;                         (make-segment (make-vect .5 .3) (make-vect .4 0)) 
+;                         (make-segment (make-vect .4 0) (make-vect .25 0)) 
+;                         ))) 
+  ;George! 
