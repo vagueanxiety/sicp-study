@@ -56,9 +56,11 @@
 - Recap and write down some takeaways
 
 
-### Haha 
+### :) 
 [aMulliganStew:](https://www.youtube.com/watch?time_continue=1&v=2QgZVYI3tDs)
 > 
     "The implementation of these things, that's George's problem."  -- Prof. Ableson.   "Poor George." -- Me.
+
+[opening/closing song: Bach: Cantata, BWV 147, Jesu, Joy of Man's Desiring](https://www.youtube.com/watch?v=FwWL8Y-qsJg)
 
 
