@@ -266,3 +266,21 @@
 (define (below painter1 painter2)
     (cc-rotate270 (beside (rotate90 painter1) (rotate90 painter2)))
 )
+
+; 2.52
+; call georege to add segments to wave segment list
+(define (look-outward-square-limit painter n)
+    (let ((quarter (corner-split painter n)))
+        ((square-of-four flip-vert cc-rotate180 identity flip-horiz) quarter)))
+
+        
+(define (new-corner-split painter n) 
+    (if (= n 0)
+        painter
+        (let ((up (up-split painter (- n 1)))
+            (right (right-split painter (- n 1))))
+            (let ((top-left up)
+                (bottom-right right) 
+                (corner (corner-split painter (- n 1))))
+                
+                (beside (below painter top-left) (below bottom-right corner))))))
