@@ -41,7 +41,7 @@
                 (let ((rest-of-product (cons '* (cddr p))))
                     (make-product (multiplier rest-of-product) (multiplicand rest-of-product))))))
 
-; recursively extracting multiplicand and augend, and simplifying terms by calling make-product and make-sum
+; recursively extracting multiplicands and augends, and simplifying terms by calling make-product and make-sum
 ; adapted from AThird's solution at http://community.schemewiki.org/?sicp-ex-2.57
 
 
@@ -94,4 +94,6 @@
 (display-list (deriv '(* x 3 x 4 5) 'x))
 (display-list (deriv '(* x 4 5) 'x))
 (display-list (deriv '(+ x 4 5) 'x))
+
+
 
