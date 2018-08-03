@@ -27,15 +27,23 @@
 
 (define (sum? x) (and (pair? x) (eq? (car x) '+)))
 (define (addend s) (cadr s))
-(define (augend s) 
+(define (augend s)
     (cond   ((null? (cdddr s)) (caddr s))
-            (else (cons '+ (cddr s)))))
+            (else 
+                (let ((rest-of-sum (cons '+ (cddr s))))
+                    (make-sum (addend rest-of-sum) (augend rest-of-sum))))))
 
 (define (product? x) (and (pair? x) (eq? (car x) '*)))
 (define (multiplier p) (cadr p))
 (define (multiplicand p) 
     (cond   ((null? (cdddr p)) (caddr p)) 
-            (else (cons '* (cddr p)))))
+            (else 
+                (let ((rest-of-product (cons '* (cddr p))))
+                    (make-product (multiplier rest-of-product) (multiplicand rest-of-product))))))
+
+; recursively extracting multiplicand and augend, and simplifying terms by calling make-product and make-sum
+; adapted from AThird's solution at http://community.schemewiki.org/?sicp-ex-2.57
+
 
 (define (make-sum a1 a2) 
     (cond ((=number? a1 0) a2) 
