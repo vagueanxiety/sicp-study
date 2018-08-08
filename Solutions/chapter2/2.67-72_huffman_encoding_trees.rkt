@@ -130,3 +130,16 @@
 (display-list test-tree-2)
 (display-list (encode '(A D A B B C A) test-tree-2))
 
+
+
+(newline)
+(newline)
+(define rocktree (generate-huffman-tree 
+    '((A 2) (GET 2) (SHA 3) (WAH 1) (BOOM 1) (JOB 2) (NA 16) (YIP 9))))
+(define rock-song '(GET A JOB SHA NA NA NA NA NA NA NA NA GET A JOB SHA NA NA NA NA NA NA NA NA WAH YIP YIP YIP YIP YIP YIP YIP YIP YIP SHA BOOM)) 
+(define encoded-rock-song (encode rock-song rocktree)) 
+(display-list encoded-rock-song)
+(length encoded-rock-song)
+
+;2.71
+; the most frequent symbol= 1 bit; the least frequent symbols = n-1 bits
