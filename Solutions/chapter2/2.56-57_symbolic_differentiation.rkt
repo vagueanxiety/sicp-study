@@ -41,6 +41,13 @@
                 (let ((rest-of-product (cons '* (cddr p))))
                     (make-product (multiplier rest-of-product) (multiplicand rest-of-product))))))
 
+; a more elegant solution by NTeGrotenhuis at http://community.schemewiki.org/?sicp-ex-2.57
+; (define (augend s)    
+; (accumulate make-sum 0 (cddr s))) 
+
+; (define (multiplicand p)  
+; (accumulate make-product 1 (cddr  p))) 
+
 ; recursively extracting multiplicands and augends, and simplifying terms by calling make-product and make-sum
 ; adapted from AThird's solution at http://community.schemewiki.org/?sicp-ex-2.57
 
