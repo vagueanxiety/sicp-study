@@ -141,3 +141,32 @@
 ; that "operations" are different division, "types" are higher-order procedure (way-to...), entries are 
 ; the actual selectors in a specified division
 ; The new company needs to install their own package of all selectors. 
+
+
+; 2.75
+(define (make-from-mag-ang mag ang) 
+    (define (dispatch op)
+        (cond 
+            ((eq? op 'real-part ) (* mag (cos ang))) 
+            ((eq? op 'imag-part ) (* mag (sin ang)))
+            ((eq? op 'magnitude ) (mag)) 
+            ((eq? op 'angle ) (ang))
+            (else (error "Unknown op: MAKE-FROM-MAG-ANG" op))))
+    dispatch)
+
+; 2.76
+; generic operations with explicit dispatch 
+; a new data type: adding new conditions on the new data type. 
+; a new operation: implementing operations for all types and adding a new generic operation that 
+; dispatches on all types.
+
+
+; data-directed style: most appropriate when new operations must often be added.
+; a new data type: installing a new package which contains all operations on the new type.
+; a new operation: implementing a new operation in each type's package and install it. Finally, adding a 
+; generic apply.
+
+
+; message-passing style: most appropriate when new types must often be added
+; a new data type: adding a new constructor which "knows" how to perform different operations on the new type. 
+; a new operation: adding a new condition on the new operation in each type's constructor.
