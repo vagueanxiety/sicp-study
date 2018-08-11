@@ -39,9 +39,11 @@
 
 
 ### MISC 
+[Ask HN: How can I get the most out of SICP?](https://news.ycombinator.com/item?id=1485277)
+
 [set up mit-scheme on macOS](http://rayhightower.com/blog/2015/02/18/sicp-study-group/)
 
-[SICP终于看完了，有一些经验想分享出来](http://cocode.cc/t/sicp/3397)
+[SICP 终于看完了，有一些经验想分享出来](http://cocode.cc/t/sicp/3397)
 
 [sicp website](https://mitpress.mit.edu/sites/default/files/sicp/index.html)
 
