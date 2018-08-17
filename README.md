@@ -15,7 +15,7 @@
 
 [sicp 解题集](http://sicp.readthedocs.io/en/latest/index.html)
 
-[wqzhang (invitation is required)](https://wqzhang.wordpress.com/sicp-solutions/)
+[wqzhang](https://web.archive.org/web/20150926220244/https://wqzhang.wordpress.com/sicp-solutions/)
 
 [sicp solutions by voom & zoom](https://voom4000.wordpress.com/2015/08/10/sicp-solutions/)
 
