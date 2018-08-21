@@ -66,6 +66,7 @@
     "The implementation of these things, that's George's problem."  -- Prof. Ableson.   "Poor George." -- Me.
 
 [opening/closing song: Bach: Cantata, BWV 147, Jesu, Joy of Man's Desiring](https://www.youtube.com/watch?v=3NqnZZR3S20)
+
 [Lecture 7A: Also sprach Zarathustra, Op.30 - Prelude ](https://youtu.be/0m6hoOelZH8?t=2090)
 
 
