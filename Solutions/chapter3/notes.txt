@@ -1,0 +1,77 @@
+The general phenomenon illustrated by the Monte Carlo example is this: From the
+point of view of one part of a complex process, the other parts appear to
+change with time. They have hidden time-varying local state.  If we wish to
+write computer programs whose structure reflects this decomposition, we make
+computational objects (such as bank accounts and random-number generators)
+whose behavior changes with time. We model state with local state variables,
+and we model the changes of state with assignments to those variables.
+
+
+The trouble here is that substitution is based ultimately on the notion that
+the symbols in our language are essentially names for values. But as soon as we
+introduce set! and the idea that the value of a variable can change, a variable
+can no longer be simply a name. Now a variable somehow refers to a place where
+a value can be stored, and the value stored at this place can change.
+
+
+
+Even though W1 and W2 are “equal” in the sense that they are both created by
+evaluating the same expression...
+
+But they are not interchangeable (in terms of changing the result of the
+evaluation)
+
+A language that supports the concept that “equals can be substituted for
+equals” in an expression without changing the value of the expression is said
+to be referentially transparent. Referential transparency is violated when we
+include set! in our computer language. This makes it tricky to determine when
+we can simplify expressions by substituting equivalent expressions.
+Consequently, reasoning about programs that use assignment becomes drastically
+more difficult.
+
+In general, we can determine that two apparently identical objects are indeed
+“the same one” only by modifying one object and then observing whether the
+other object has changed in the same way. But how can we tell if an object has
+“changed” other than by observing the “same” object twice and seeing whether
+some property of the object differs from one observation to the next? Thus, we
+cannot determine “change” without some a priori notion of “sameness,” and we
+cannot determine sameness without observing the effects of change.
+
+changed? <= observing the "same" object twice and check difference <=
+"sameness" comes from observing one object after the change of another one (how
+do know it actually changed?)
+
+
+(e.g. mirrored objects vs two distinct actual objects)
+
+The phenomenon of a single computational object being accessed by more than one
+name is known as aliasing. 
+
+
+
+In general, so long as we never modify data objects, we can regard a compound
+data object to be precisely the totality of its pieces. For example, a rational
+number is determined by giving its numerator and its denominator. 
+
+But this view is no longer valid in the presence of change, where a compound
+data object has an “identity” that is something different from the pieces of
+which it is composed. A bank account is still “the same” bank account even if
+we change the balance by making a withdrawal; conversely, we could have two
+different bank accounts with the same state information. This complication is a
+consequence, not of our programming language, but of our perception of a bank
+account as an object. We do not, for example, ordinarily regard a rational
+number as a changeable object with identity, such that we could change the
+numerator and still have “the same” rational number
+
+In contrast to functional programming, programming that makes extensive use of
+assignment is known as imperative programming.
+
+
+
+
+
+
+
+
+
+
