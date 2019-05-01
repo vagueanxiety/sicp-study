@@ -19,7 +19,7 @@ Even though W1 and W2 are “equal” in the sense that they are both created by
 evaluating the same expression...
 
 But they are not interchangeable (in terms of changing the result of the
-evaluation)
+                                     evaluation)
 
 A language that supports the concept that “equals can be substituted for
 equals” in an expression without changing the value of the expression is said
@@ -39,19 +39,19 @@ cannot determine sameness without observing the effects of change.
 
 changed? <= observing the "same" object twice and check difference <=
 "sameness" comes from observing one object after the change of another one (how
-do know it actually changed?)
+                                                                             do know it actually changed?)
 
 
 (e.g. mirrored objects vs two distinct actual objects)
 
 The phenomenon of a single computational object being accessed by more than one
-name is known as aliasing. 
+name is known as aliasing.
 
 
 
 In general, so long as we never modify data objects, we can regard a compound
 data object to be precisely the totality of its pieces. For example, a rational
-number is determined by giving its numerator and its denominator. 
+number is determined by giving its numerator and its denominator.
 
 But this view is no longer valid in the presence of change, where a compound
 data object has an “identity” that is something different from the pieces of
@@ -68,10 +68,94 @@ assignment is known as imperative programming.
 
 
 
+3.2
+An environment is a sequence of frames. Each frame is a table (possibly empty)
+of bindings, which associate variable names with their corresponding values.
+
+f0
+f1
+f2
+f3
+
+fn:
+var val
+var val
+
+
+f1 -> f0
+
++-----------------------+
+|  f0                   |
+|                       |
+|                       |
+| +------------+        |
+| | f1         |        |
+| |            |        |
+| |            |        |
+| +------------+        |
+|                       |
++-----------------------+
+
+bindings in f1 may **shadow** bindings in f0
+
+**An expression acquires a meaning with respect to the environment in which it is
+evaluated.**
+
+eval wrt to env
+
+
+procedure: lambda expression text and a pointer to its environment
+i.e. lambda expression + env = (evaled to produce a) procedure 
+define: binds a value to a symbol
+i.e. In general, define creates definitions by adding bindings to frames
+
+A single frame may contain at most one binding for any variable. Each frame
+also has **a pointer to its enclosing environment**, unless, for the purposes of
+discussion, the frame is considered to be global. The value of a variable with
+respect to an environment is the value given by the binding of the variable in
+the **first frame in the environment that contains a binding for that
+variable**. If no frame in the sequence specifies a binding for the variable,
+then the variable is said to be **unbound in the environment**.
 
 
 
+****
+A procedure object is applied to a set of arguments by constructing a frame,
+binding the formal parameters of the procedure to the arguments of the call,
+and then evaluating the body of the procedure in the context of the new
+environment constructed. The new frame has as its enclosing environment the
+environment part of the procedure object being applied.  
+
+A procedure is created
+by evaluating a λ-expression relative to a given environment. The resulting
+procedure object is a pair consisting of the text of the λ-expression and a
+pointer to the environment in which the procedure was created.
+
+****
 
 
 
+When the set! is executed, the binding of balance in E1 is changed. At the
+completion of the call to W1, balance is 50, and the frame that contains
+balance is still pointed to by the procedure object W1. The frame that binds
+amount (in which we executed the code that changed balance) is no longer
+relevant, **since the procedure call that constructed it has terminated, and
+there are no pointers to that frame from other parts of the environment.**
+
+
+Recall from 1.3.2 that let is **simply syntactic sugar** for a procedure call:
+
+(let ((⟨var⟩ ⟨exp⟩)) ⟨body⟩)
+is interpreted as an alternate syntax for
+
+((lambda (⟨var⟩) ⟨body⟩) ⟨exp⟩)
+
+
+**another syntactic sugar is:**
+
+(define (x y) (<body>))
+
+is interpreted as an alternate syntax for
+
+(define x (lambda (y) (<body>)))
 

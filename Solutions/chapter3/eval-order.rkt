@@ -45,3 +45,8 @@
 
 (f2 0)
 (f2 1)
+
+;; what makes these two implementations different and why?
+;; i.e. how is f1 and f2 is evaled and applied to args?
+; how is define keyword related to environment?
+;
