@@ -131,6 +131,28 @@ by evaluating a λ-expression relative to a given environment. The resulting
 procedure object is a pair consisting of the text of the λ-expression and a
 pointer to the environment in which the procedure was created.
 
+We also specify that defining a symbol using define creates a binding in the
+current environment frame and assigns to the symbol the indicated value.141
+
+Finally, we specify the behavior of set!, the operation that forced us to
+introduce the environment model in the first place. Evaluating the expression
+(set! ⟨variable⟩ ⟨value⟩) in some environment locates the binding of the
+variable in the environment and changes that binding to indicate the new value.
+That is, one finds the first frame in the environment that contains a binding
+for the variable and modifies that frame. If the variable is unbound in the
+environment, then set! signals an error.
+
+The names of the local procedures do not interfere with names external to the
+enclosing procedure, because the local procedure names will be bound in the
+frame that the procedure creates when it is run, rather than being bound in the
+global environment.
+
+
+The local procedures can access the arguments of the enclosing procedure,
+simply by using parameter names as free variables. **This is because the body of
+the local procedure is evaluated in an environment that is subordinate to the
+evaluation environment for the enclosing procedure.**
+
 ****
 
 

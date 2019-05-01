@@ -72,3 +72,47 @@
 ; set! affects only balance but not initial amount
 ; 
 ;
+;
+
+
+(define (make-account balance)
+  (define (withdraw amount)
+    (if (>= balance amount)
+        (begin (set! balance 
+                     (- balance 
+                        amount))
+               balance)
+        "Insufficient funds"))
+  (define (deposit amount)
+    (set! balance (+ balance amount))
+    balance)
+  (define (dispatch m)
+    (cond ((eq? m 'withdraw) withdraw)
+          ((eq? m 'deposit) deposit)
+          (else (error "Unknown request: 
+                        MAKE-ACCOUNT" 
+                       m))))
+  dispatch)
+
+(define acc (make-account 50))
+;;
+; 1. frame A created for balance = 50, the body of make-account is eval'ed
+; 2. internal procedure objects are bound to frame A
+; 3. dispatch is returned and it is bound to acc in the global env 
+
+((acc 'deposit) 40)
+;90
+; 1. frame B is created with m = 'deposit, subordinate to frame A, and 
+; then the body of dispatch is eval'ed
+; 2. procedure deposit is returned and frame B is destroyed, then it is applied to 40
+; 3. frame C is created with amount = 40, subordinate to frame A
+; 4. the body of deposit is eval'ed, and balance in frame A is changed
+
+((acc 'withdraw) 60)
+;30
+; similar to the above
+
+
+
+(define acc2 (make-account 100))
+;http://community.schemewiki.org/?sicp-ex-3.11
