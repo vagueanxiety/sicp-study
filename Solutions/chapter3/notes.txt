@@ -39,7 +39,7 @@ cannot determine sameness without observing the effects of change.
 
 changed? <= observing the "same" object twice and check difference <=
 "sameness" comes from observing one object after the change of another one (how
-                                                                             do know it actually changed?)
+do know it actually changed?)
 
 
 (e.g. mirrored objects vs two distinct actual objects)
@@ -105,7 +105,7 @@ eval wrt to env
 
 
 procedure: lambda expression text and a pointer to its environment
-i.e. lambda expression + env = (evaled to produce a) procedure 
+i.e. lambda expression + env = (evaled to produce a) procedure
 define: binds a value to a symbol
 i.e. In general, define creates definitions by adding bindings to frames
 
@@ -124,7 +124,7 @@ A procedure object is applied to a set of arguments by constructing a frame,
 binding the formal parameters of the procedure to the arguments of the call,
 and then evaluating the body of the procedure in the context of the new
 environment constructed. The new frame has as its enclosing environment the
-environment part of the procedure object being applied.  
+environment part of the procedure object being applied.
 
 A procedure is created
 by evaluating a λ-expression relative to a given environment. The resulting
@@ -181,3 +181,39 @@ is interpreted as an alternate syntax for
 
 (define x (lambda (y) (<body>)))
 
+
+
+
+
+constructors
+selectors aka getter
+mutators aka setter
+
+
+An empty list is simply the nil symbol (and symbols, by definition, are not conses).
+car and cdr are defined to return nil if given nil.
+
+https://softwareengineering.stackexchange.com/questions/144691/why-is-the-empty-list-used-as-the-list-terminator-in-lisp
+
+
+A Lisp list is not really terminated with an empty list -- it's terminated with
+a special value, traditionally called nil. As it happens, that also
+traditionally evaluates as false -- which makes it about as close to C's null
+pointer as you can get (in C, a null pointer constant is an integer constant
+                           equal to zero, which also evaluates to false).
+
+An empty list is basically just a rather short-hand way of expressing NIL --
+since you don't even have a single cons cell, all you're left with is the NIL
+that terminates the list. In other words, it's not that a list is terminated
+with an empty list -- it's that an empty list consists of only a terminator.
+
+Using dot notation, it's possible to link cons cells together in other ways,
+but the result isn't a "list" as the term is normally used.
+
+
+In scheme, the empty list is '(), not null. In other lisps it is also called nil.
+
+
+cycle-detection:
+https://cs.stackexchange.com/questions/83577/intuitive-proof-for-floyds-cycle-detection-algorithm
+https://en.wikipedia.org/wiki/Cycle_detection
