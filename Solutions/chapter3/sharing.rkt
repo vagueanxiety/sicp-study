@@ -94,4 +94,3 @@ z2
 (has-cycle? '(d d f f))
 
 
-
