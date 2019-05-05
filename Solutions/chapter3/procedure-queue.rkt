@@ -57,7 +57,8 @@
 
 ;;
 ; note that we didn't move the rear pointer when deleting an element from the
-; queue, because of the way empty-queue is implemented.
+; queue, because of the way empty-queue/insert-queue is implemented
+;
 (define (delete-queue! queue)
   (cond ((empty-queue? queue)
          (error "DELETE! called with
