@@ -193,3 +193,4 @@
 (print-deque (rear-insert-deque! q1 'r4))
 (print-deque (rear-insert-deque! q1 'r5))
 (empty-deque? q1)
+

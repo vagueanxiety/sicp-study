@@ -190,6 +190,9 @@ selectors aka getter
 mutators aka setter
 
 
+read the fucking manual first: R5RS / R6RS
+
+
 An empty list is simply the nil symbol (and symbols, by definition, are not conses).
 car and cdr are defined to return nil if given nil.
 
@@ -217,3 +220,14 @@ In scheme, the empty list is '(), not null. In other lisps it is also called nil
 cycle-detection:
 https://cs.stackexchange.com/questions/83577/intuitive-proof-for-floyds-cycle-detection-algorithm
 https://en.wikipedia.org/wiki/Cycle_detection
+
+
+Two ways of implementing "objects" (contrast queue vs procedure-queue)
+
+1. objects are represented in terms of operations that take objects
+(interface/type) as their arguments (thus assume some structure of the object)
+
+
+2. objects are represented procedurally
+
+
