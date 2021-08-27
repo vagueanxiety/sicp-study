@@ -43,8 +43,6 @@
 
 [《计算机程序的构造和解释》视频公开课中文化项目](https://github.com/DeathKing/Learning-SICP)
 
-[SICP 终于看完了，有一些经验想分享出来](http://cocode.cc/t/sicp/3397)
-
 [opening/closing song: Bach: Cantata, BWV 147, Jesu, Joy of Man's Desiring](https://www.youtube.com/watch?v=3NqnZZR3S20)
 
 [Lecture 7A: Also sprach Zarathustra, Op.30 - Prelude ](https://youtu.be/0m6hoOelZH8?t=2090)
