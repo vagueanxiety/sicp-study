@@ -3,7 +3,7 @@
 
 [SICP in textinfo format](https://sarabander.github.io/sicp/html/index.xhtml)
 
-[Video lectures given in July 1986](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-001-structure-and-interpretation-of-computer-programs-spring-2005/video-lectures/)
+[Video lectures](https://www.youtube.com/watch?v=-J_xL4IGhJA&list=PLE18841CABEA24090)
 
 [Lecture notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-001-structure-and-interpretation-of-computer-programs-spring-2005/lecture-notes/)
 
