@@ -1,5 +1,5 @@
 ### Links
-[SICP website](https://mitpress.mit.edu/sites/default/files/sicp/index.html)
+[SICP website](https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/index.html)
 
 [SICP in textinfo format](https://sarabander.github.io/sicp/html/index.xhtml)
 
